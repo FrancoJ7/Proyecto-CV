@@ -1,0 +1,162 @@
+:root{
+    --color-primary: #f9e267;
+    --color-dark: black;
+    --color-light: white;
+    --color-gray: #b3b3b3;
+
+    --font: "system-ui", "sans-serif";
+}
+
+/*@media (prefers-color-scheme: dark){ /*PARA ACTIVAR EL MODO OSCURO SI TENGO EL S.O POR DEFECTO COMO OSCURO PRA QUE TAMBIEN LO TOME LA PAGINA
+    :root{
+    --color-primary: #544c28;
+    --color-dark:white;
+    --color-light: black;
+    --color-gray: #b3b3b3;
+
+    --font: "system-ui", "sans-serif";
+    }
+}*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+}
+
+html {
+    background: var(--color-light);
+    color: var(--color-dark);
+    padding: 0.5rem; /*Le dara una distancia borde*/
+    line-height: 1.3rem;
+}
+
+section {
+    margin-bottom: 2rem; /*PARA DE LOS CUADROS EN NEGRO CON EL TEXTO QUE TENGAN ARRIBA*/
+}
+
+/*COMIENZA CON LA PARTE DEL HEADER*/
+
+.header {
+    display: grid;
+    grid-template-columns: minmax(100px, 180px) 1fr; /*1fr es el 50%*/
+    max-width: 1000px;
+    margin: 0 auto; 
+    gap: 6px;
+}
+
+.header_foto {
+    display: inline-block;
+    width: 100%; /*Tamaño maximo de la columna*/
+    height: 100%; /*Alto maximo de la fila*/
+}
+
+.header_texto {
+    background: var(--color-primary);
+    padding: 2rem;
+}
+
+.header_texto h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.header_texto h2 {
+    font-size: 1rem;
+    margin-top: 0.25 rem;
+}
+
+/*COMIENZA CON LA PARTE DE DETALLES*/
+
+.content{ /*PADDING en Y  y en X*/
+    padding: 2rem 4rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content_title {
+    background: var(--color-dark);
+    color: var(--color-light);
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    margin-bottom: 1rem;
+    font-size: 1rem; /*Especifica el tamaño de fuetne para que el naveador no lo ponga por defecto*/
+}
+
+.content_subtitle{ /*Como esta, esta bien, pero le sobreescribe los valores por las dudas tome otro el navegador con el que se ejecute*/
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.content_details{ /*EL GLOBAL*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: min-content;
+    gap: 30px 50px; /*EJE Y e EjE X*/
+}
+
+.content_details > div:nth-child(2){ /*CAMBIA EL ORDEN*/
+    order: 2;
+}
+
+.content_detail { /*CADA UNO DE LOS DETAIL*/
+    display: flex; /*LO QUE SE USABA ANTERIOR A GRID*/
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.content_detail a,
+.content_detail span {
+    text-decoration: none; /*Sin subrayar*/
+    font-style: normal;
+}
+
+.content_detail a[href*="malito"]{
+    text-decoration: underline;
+}
+
+/*PERFIL QUEDA COMO ESTA, LE AGREGE MAS ESPACIO ENTRE LAS LIENAS EN EL HTML DE ARRIBA*/
+
+/*COMIENZA CON LA PARTE DE EDUCACION*/
+
+.content_date-time{
+    color: var(--color-gray);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.content_list{
+    margin-left: 2rem;
+    margin-block: 0.75rem; /*SERIA ARRIBA Y ABAJO (VER BIEN QUE ES 48:24)*/
+}
+
+.content_list > li{
+    margin-bottom: 0.2rem;
+}
+
+/*COMIENZA CON LA PARTE DE COMPERENCIAS*/
+
+.content_skills{
+    gap: 14px 60px;
+}
+
+.content_skill > progress {
+    width: 100%;
+    height: 5px;
+    background: var(--color-dark);
+  
+}
+
+.content_skill > progress::-webkit-progress-value {
+    background: var(--color-dark);
+}
+
+.content_skill > progress::-webkit-progress-bar {
+    background: var(--color-gray);
+}
