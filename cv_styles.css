@@ -31,6 +31,12 @@ html {
     line-height: 1.3rem;
 }
 
+.cv{
+    padding: 0;
+    margin: 0;
+    border: 5px solid black;
+}
+
 section {
     margin-bottom: 2rem; /*PARA DE LOS CUADROS EN NEGRO CON EL TEXTO QUE TENGAN ARRIBA*/
 }
@@ -40,8 +46,8 @@ section {
 .header {
     display: grid;
     grid-template-columns: minmax(100px, 180px) 1fr; /*1fr es el 50%*/
-    max-width: 1000px;
-    margin: 0 auto; 
+    max-width: auto;
+    margin: 0; 
     gap: 6px;
 }
 
