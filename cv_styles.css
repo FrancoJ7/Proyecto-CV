@@ -131,7 +131,7 @@ section {
 /*COMIENZA CON LA PARTE DE EDUCACION*/
 
 .content_date-time{
-    color: var(--color-gray);
+    color: gray;
     text-transform: uppercase;
     font-size: 0.8rem;
     font-weight: 400;
